@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140461850-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-140461850-1');
+  </script>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.7/dist/mini-default.min.css">
+  <!--
+  Note: This is a good css too worth looking at in the future : https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-nord.min.css
+  -->
+
+  <link rel="stylesheet"  href="./static/style.css">
+
+  <meta charset="UTF-8">
+  <title>Alphanumeric Recognition -  by Imad </title>
+</head>
+
+<div class="common">
+
+<body>
+
+<header class="sticky row">
+    <img src="{{url_for('static', filename='c.png')}}" align="left" style="font-size:18px;width:58px;
+    height: auto;"/>
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+  <a href="#" class="logo" style="font-family:fangsong;">Securing Deep Learning Models on NLP</a>
+  </div>
+</header>
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <br/>
+    <h1 style="font-size: 1.5rem;font-family:fangsong; font-weight: bold; font-weight: bold;">Synonym Substitution Attack</h1>
+    <p>
+    This bert-base-uncased model was fine-tuned for comment classification and the yelp_polarity dataset loaded using the nlp library. The model was fine-tuned for 10 epochs with a batch size of 16, a learning rate of 5e-05, and a maximum sequence length of 256. Since this was a classification task, the model was trained with a cross-entropy loss function. The best score the model achieved on this task was 0.99, as measured by the eval set accuracy, found after 4 epochs.
+    </p>
+   </br>
+  <div class="boxitem">
+            <form action="http://127.0.0.1:5000/forward/" method="post">
+            <input type="text" name="comment_text" style="width: 640px;" placeholder="Please Enter the comment to predict">
+            <button type="submit" class="primary" onclick="predict2(comment_text)" style="font-family: fangsong;font-size: 18px;width: 100px;">Predict</button>
+            </form>
+     <p>
+         <a href="http://127.0.0.1:5000/test_link/">Adversarial Examples which can fool the model</a>
+    </p>
+            <!--<button id="clearbtn" class="primary" >Clear</button>-->
+  </div>
+<!--
+  <div class="boxitem">
+            <div id="predictdigit"></div>
+            <div id="probStr">Probability: </div>
+  </div>-->
+  </div>
+</div>
+<div class="col-sm-12 col-md-10 col-md-offset-1">
+<p>
+    This model can be  fooled by the adversarial examples generated against this model using the text attack library,
+Text Fooler as a recipe and in order to combat those attacks a Normalised Model has been developed with embedding surgery.
+which can greatly improves the robustness of the attack to fine-tuning.
+</p>
+</div>
+ <div class="boxitem">
+<!--<div class="col-sm col-md-8 col-md-offset-2 col-lg-5 col-lg-offset-4 row" style="text-align: center;">  -->
+    <form  action="http://127.0.0.1:5000/forward2/" method="post">
+    <input type="text" name="new_text" style="width: 640px;" placeholder="Please Enter the  comment to predict">
+        <button type="submit" class="primary" onclick="predictionsbert(new_text)" style="font-family: fangsong;font-size: 18px;width: 100px;">Predict</button>
+    </form>
+</div>
+    <!--
+      <ul style="text-align: left;">
+        <small>Hyperparameter optimization ; Neural network pruning ;</small>
+        <small>Center and crop image ; Show top-n predictions ;</small>
+        <small>Model versionning ; Load balancer in a cluster ;</small>
+        <small>Add correction and submit options - Re-train...</small>
+      </ul>
+      -->
+
+
+
+<div class="container" style="height: 8rem; position: relative; font-weight: bold;">
+  <span class="toast doc" style="position: absolute;">
+   Supervisor:Bushra Sabir Student:Shaik Silaruddin
+  </span>
+</div>
+
+<!--
+<footer class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    Made with ♡ during a boring weekend | &copy; 2019 | <a href="https://imadelhanafi"> Imad El Hanafi</a>
+  </div>
+</footer>
+</div>
+-->
+
+<script src = "./static/index.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//d3js.org/d3.v5.min.js"></script>
+</body>
+</div>
+</html>
